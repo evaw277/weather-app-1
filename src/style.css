@@ -9,27 +9,27 @@ h2 {
   font-size: 40px;
 }
 ul {
-  border: 1px solid black;
   list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  line-height: 2;
-  text-align: center;
+
+  padding: 20px;
+
   border-radius: 4px;
 }
 
-form {
-  text-align: center;
-  padding: 0px 10px;
-}
 .container {
   border: 1px solid black;
   border-radius: 4px;
   padding: 30px;
 }
-.city-info {
-  border: 1px solid black;
+
+.temperature {
+  font-size: 40px;
 }
 .today-forecast {
   border: none;
+}
+form {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
 }

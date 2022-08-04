@@ -1,7 +1,6 @@
 let now = new Date();
 
 let h1 = document.querySelector("h1");
-let time = document.querySelector("#time");
 
 let date = now.getDate();
 let hours = now.getHours();
@@ -41,13 +40,16 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-h1.innerHTML = `${day}  ${month} ${date}, ${year}`;
-time.innerHTML = `${hours}:${minutes}`;
+h1.innerHTML = `${hours}:${minutes}, ${day}  ${month} ${date}, ${year}`;
 
 function showWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#temperature");
   currentTemperature.innerHTML = `${temperature}°C`;
+  let windSpeed = document.querySelector("#wind");
+  let humidity = document.querySelector("#humidity");
+  windSpeed.innerHTML = `wind: ${response.data.wind.speed}`;
+  humidity.innerHTML = `humidity: ${response.data.main.humidity}%`;
 
   let city = document.querySelector("h2");
   city.innerHTML = `${response.data.name}`;
@@ -55,6 +57,13 @@ function showWeather(response) {
   let description = response.data.weather[0].description;
   let currentDescription = document.querySelector("#weather-description");
   currentDescription.innerHTML = `${description}`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  console.log(response);
 }
 
 function search(event) {

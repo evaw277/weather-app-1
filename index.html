@@ -20,70 +20,32 @@
   </head>
   <body>
     <div class="container">
-      <form id="search-box">
-        <input type="text" placeholder="Change city" id="search-input" />
-        <input type="submit" value="Search" />
-      </form>
-      <br />
-      <button id="current-button">Current Location</button>
-      <div class="row city-info">
-        <div class="col-6">
-          <h1 class="date" id="date-now">Monday, May 30th</h1>
-          <h2>New York</h2>
-          <span id="temperature">16°C</span>
+      <div class="container-wrapper">
+        <h1 class="date" id="date-now"></h1>
+        <button id="current-button">Current Location</button>
+        <form id="search-box">
+          <input type="text" placeholder="Change city" id="search-input" />
+          <input type="submit" value="Search" />
+        </form>
+        <br />
 
-          <p id="weather-description">Rain for the next few days</p>
-        </div>
-
-        <div class="col-6">
-          <ul class="today-forecast">
-            <li id="time">9:37 PM</li>
-            <li><i class="fa-solid fa-cloud"></i></li>
-            <li>_%</li>
+        <div class="row city-info">
+          <div class="col-6">
+            <h2></h2>
+            <span class="temperature" id="temperature">°C</span>
+          </div>
+          <div class="col-6">
+            <img src="" alt="icon" id="icon" />
+          </div>
+          <ul>
+            <li id="weather-description"></li>
+            <li id="wind">km/h</li>
+            <li id="humidity">%</li>
           </ul>
         </div>
       </div>
-      <br />
-      <div class="row days">
-        <div class="col">
-          <ul>
-            <li>Tuesday</li>
-            <li><i class="fa-solid fa-cloud-sun-rain"></i></li>
-            <li>_%</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li>Wednesday</li>
-            <li><i class="fa-solid fa-cloud-rain"></i></li>
-            <li>_%</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li>Thursday</li>
-            <li><i class="fa-solid fa-cloud-bolt"></i></li>
-            <li>_%</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li>Friday</li>
-            <li><i class="fa-solid fa-sun"></i></li>
-            <li>_%</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li>Saturday</li>
-            <li><i class="fa-solid fa-cloud-sun"></i></li>
-            <li>_%</li>
-          </ul>
-        </div>
-      </div>
-      <br />
-      <a href="https://github.com/evaw277/weather-app-1">Check out my GitHub</a>
     </div>
+    <a href="https://github.com/evaw277/weather-app-1">Check out my GitHub</a>
     <script src="src/script.js"></script>
   </body>
 </html>
