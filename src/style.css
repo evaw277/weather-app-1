@@ -15,6 +15,11 @@ ul {
 
   border-radius: 4px;
 }
+form {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
 
 .container {
   border: 1px solid black;
@@ -28,8 +33,10 @@ ul {
 .today-forecast {
   border: none;
 }
-form {
-  margin: 0 auto;
-  display: block;
-  text-align: center;
+.unit-links .active {
+  color: black;
+  cursor: default;
+}
+.unit-links .active:hover {
+  text-decoration: none;
 }
