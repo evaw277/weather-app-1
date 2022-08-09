@@ -79,7 +79,6 @@ function search(event) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=${units}`;
     axios.get(url).then(showWeather);
   } else {
-    h1.innerHTML = null;
     alert("Please type a city");
   }
 }
