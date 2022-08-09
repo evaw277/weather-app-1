@@ -11,45 +11,66 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css" />
+
     <script
       src="https://kit.fontawesome.com/3f9f67c539.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="container-wrapper">
-        <h1 class="date" id="date-now"></h1>
-        <button id="current-button">Current Location</button>
-        <form id="search-box">
-          <input type="text" placeholder="Change city" id="search-input" />
-          <input type="submit" value="Search" />
-        </form>
-        <br />
+      <div class="weather-app">
+        <div class="weather-app-wrapper">
+          <h1 class="date" id="date-now"></h1>
 
-        <div class="row city-info">
-          <div class="col-6">
-            <h2></h2>
-            <span class="temperature" id="temperature"></span>
-            <span class="unit-links">
-              <a href="#" class="active" id="c-units">C°</a> |
-              <a href="#" id="f-units">F°</a>
-            </span>
+          <form id="search-box" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="text"
+                  placeholder="Change city"
+                  class="form-control"
+                  id="search-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
+
+          <button id="current-button" class="btn btn-secondary mb-3">
+            Current Location
+          </button>
+
+          <div class="row city-info">
+            <div class="col-6">
+              <h2></h2>
+              <span class="temperature" id="temperature"></span>
+              <span class="unit-links">
+                <a href="#" class="active" id="c-units">C°</a> |
+                <a href="#" id="f-units">F°</a>
+              </span>
+            </div>
+            <div class="col-6">
+              <img src="" alt="icon" id="icon" />
+            </div>
+            <ul>
+              <li id="weather-description"></li>
+              <li id="wind">km/h</li>
+              <li id="humidity">%</li>
+            </ul>
           </div>
-          <div class="col-6">
-            <img src="" alt="icon" id="icon" />
-          </div>
-          <ul>
-            <li id="weather-description"></li>
-            <li id="wind">km/h</li>
-            <li id="humidity">%</li>
-          </ul>
         </div>
       </div>
+      <a href="https://github.com/evaw277/weather-app-1">Check out my GitHub</a>
+      <script src="src/script.js"></script>
     </div>
-    <a href="https://github.com/evaw277/weather-app-1">Check out my GitHub</a>
-    <script src="src/script.js"></script>
   </body>
 </html>

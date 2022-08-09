@@ -6,7 +6,7 @@ h1 {
   line-height: 30px;
 }
 h2 {
-  font-size: 40px;
+  font-size: 45px;
 }
 ul {
   list-style: none;
@@ -21,17 +21,26 @@ form {
   text-align: center;
 }
 
-.container {
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.weather-app {
   border: 1px solid black;
-  border-radius: 4px;
-  padding: 30px;
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .temperature {
-  font-size: 40px;
+  font-size: 45px;
 }
 .today-forecast {
   border: none;
+}
+.unit-links {
+  position: relative;
+  top: -20px;
 }
 .unit-links .active {
   color: black;
