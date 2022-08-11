@@ -42,6 +42,13 @@ let month = months[now.getMonth()];
 
 h1.innerHTML = `${hours}:${minutes}, ${day}  ${month} ${date}, ${year}`;
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "a5dcf72a868ff3572b4a1a8358099667";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentTemperature = document.querySelector("#temperature");
@@ -65,6 +72,8 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function search(event) {
