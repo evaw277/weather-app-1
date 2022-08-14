@@ -22,14 +22,15 @@ form {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
   margin: 30px auto;
 }
 
 .weather-app {
+  max-width: 600px;
   border: 1px solid black;
   border-radius: 8px;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .temperature {
@@ -51,4 +52,7 @@ form {
 }
 .weather-forecast-temperatures {
   font-size: 13px;
+}
+.unit-f {
+  top: -34px;
 }
